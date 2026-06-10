@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Prefortune Technologies LLP - Odoo Automatic Version Upgrade / Migration</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <section style="border-radius:20px; font-family:'Inter', sans-serif">
+        <div class="container shadow-lg p-4 mt-5" style=" border-radius: 30px; background-color:#f1f1f1;">
+            <div class="row">
+                <div class="col-12">
+                    <div class="mt-3 align-content-center pt-3"> <img class="mx-auto d-block" width="28%" height="28%"
+                            src="img/prefortune_logo.png"> </div>
+                    <h1 class="text-center  pt-3" style="padding-bottom: 10px; color:#1c243c"><strong> Odoo Automatic
+                            Version Upgrade / Migration</strong></h1>
+                </div>
+                <div class="container col-12 pb-2">
+                    <p class="text-justify" style="color: #443e3e;">
+                        Upgrade your Odoo instance to the latest Odoo 19 version in just a few clicks. This application
+                        automates the migration process for standard Odoo databases, helping businesses stay up-to-date
+                        with the latest features, performance improvements, and security enhancements while minimizing
+                        downtime and manual effort.
+                        The system analyzes your database, validates migration compatibility, and performs the upgrade
+                        automatically. If custom developments or unsupported third-party applications are detected, the
+                        system will create a support ticket for manual review by our migration specialists.</p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center text-center">
+                <a class="mr-2"
+                    style="padding:12px 32px; display:inline-block; background-color:#292e41; color:#F1F1F1; border-radius:25px; margin:14px 0px; font-weight:400"
+                    href="mailto:odoosupport@prefortune.com"><i class="fa fa-envelope mr-1"></i><b>REQUEST A
+                        DEMO</b></a>
+            </div>
+        </div>
+    </section>
+    <!-- <section>
+        <div class="container p-4 mt-5" style=" border-radius: 20px;">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center mb-3 pt-3" style="padding-bottom: 10px; color:#4B5ADA"><strong>Watch Quick
+                            Video</strong></h1>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center text-center">
+                <a href="https://youtu.be/2cDzO43w63c" target="_blank"><img src="watchvideo.png" height="300"
+                        style="border: 1px solid #ededed; border-radius: 18px;"></a>
+            </div>
+        </div>
+    </section> -->
+    <section>
+        <div class="container p-4 mt-5" style=" border-radius: 20px;">
+            <div class="row">
+                <div class="col-12 ">
+                    <h1 class="text-center mb-3 pt-3" style="padding-bottom: 10px; color:#4B5ADA"><strong>Key
+                            Features</strong></h1>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="row position-relative" style="color:#333333; font-weight:500; font-size:16px">
+                            <div class="col-sm-6 col-lg-4 col-xl-6 mb-3 pr-lg-0 pr-sm-1">
+                                <div class="d-flex align-items-top h-100 bg-white shadow-sm px-3 py-3"
+                                    style="border:1px solid #4B5ADA; border-radius:15px">
+                                    <div style="width:100px">
+                                        <img class="img img-responsive" style="width:40px" src="img/1.png">
+                                    </div>
+                                    <div class="w-100 pl-3">
+                                        <h5 style="color:202a25">Automated Version Upgrade.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 col-xl-6 mb-3 pr-lg-0 pr-sm-1">
+                                <div class="d-flex align-items-top h-100 bg-white shadow-sm px-3 py-3"
+                                    style="border:1px solid #4B5ADA; border-radius:15px">
+                                    <div style="width:100px">
+                                        <img class="img img-responsive" style="width:40px" src="img/2.png">
+                                    </div>
+                                    <div class="w-100 pl-3">
+                                        <h5 style="color:202a25">Pre-Migration Analysis.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 col-xl-6 mb-3 pr-lg-0 pr-sm-1">
+                                <div class="d-flex align-items-top h-100 bg-white shadow-sm px-3 py-3"
+                                    style="border:1px solid #4B5ADA; border-radius:15px">
+                                    <div style="width:100px">
+                                        <img class="img img-responsive" style="width:40px" src="img/3.png">
+                                    </div>
+                                    <div class="w-100 pl-3">
+                                        <h5 style="color:202a25">Data Preservation.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 col-xl-6 mb-3 pr-lg-0 pr-sm-1">
+                                <div class="d-flex align-items-top h-100 bg-white shadow-sm px-3 py-3"
+                                    style="border:1px solid #4B5ADA; border-radius:15px">
+                                    <div style="width:100px">
+                                        <img class="img img-responsive" style="width:40px" src="img/4.png">
+                                    </div>
+                                    <div class="w-100 pl-3">
+                                        <h5 style="color:202a25">Migration Validation.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 col-xl-6 mb-3 pr-lg-0 pr-sm-1">
+                                <div class="d-flex align-items-top h-100 bg-white shadow-sm px-3 py-3"
+                                    style="border:1px solid #4B5ADA; border-radius:15px">
+                                    <div style="width:100px">
+                                        <img class="img img-responsive" style="width:40px" src="img/5.png">
+                                    </div>
+                                    <div class="w-100 pl-3">
+                                        <h5 style="color:202a25">Migration Reports.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container shadow-lg p-4 mt-5 text-center" style="border-radius: 30px;">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bg-white mb-4 pt-2" style="border-radius:10px">
+                        <ul role="tablist" class="nav nav-tabs justify-content-center" data-tabs="tabs"
+                            style="background-color:white; color: #4F4F4F; font-weight: 400; font-size: 14px;">
+                            <li class="nav-item"><a href="#overview" class="nav-link active"
+                                    data-bs-toggle="tab">Overview</a></li>
+                            <li class="nav-item"><a href="#screenshots" class="nav-link "
+                                    data-bs-toggle="tab">Screenshots</a></li>
+                            <li class="nav-item"><a href="#faq" class="nav-link" data-bs-toggle="tab">FAQ</a></li>
+                            <li class="nav-item"><a href="#support" class="nav-link" data-bs-toggle="tab">Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content p-4 mt-3" style="border-radius:10px;" id="v-pills-tabContent1">
+                <div class="tab-pane fade active show" id="overview">
+                    <div class="col-12">
+                        <h2 class="text-center pt-3" style="padding-bottom: 10px; color:#4B5ADA"><strong>Odoo Any2Any
+                                Version Migration App</strong></h2>
+                        <div class="dropdown-divider mt-3 mb-3"
+                            style="border-color: #4B5ADA; width: 75%; margin: 0 auto;"></div>
+                    </div>
+                    <div class="row">
+                        <p class="text-justify" style="color: #202a25;">Our efficient
+                            <i style="color: #4B5ADA;"><strong>Odoo Automatic Version Upgrade / Migration</strong></i>
+                            is a professional automation tool designed to simplify the upgrade process between Odoo
+                            versions.
+                            Whether you are upgrading from legacy versions or moving across major releases, this module
+                            helps automate database migration, validate compatibility, and reduce downtime.<br><br>
+
+                            It supports both Community and Enterprise editions and works across multiple deployment
+                            environments.
+                            <br>
+                            <br>
+                        </p>
+                        <div class="col-12">
+                            <h3 class="text-center alert"
+                                style=" color:#4B5ADA; background-color:#d9ddff; border-radius:10px"><strong>
+                                    Odoo Automatic Version Upgrade / Migration App</strong></h3>
+
+                        </div>
+                        <div class="col-6">
+                            <ul class="mt-3 pb-4">
+                                <li class="mb8 text-left mt-3" style="text-align:left;">
+                                    <b>Upgrade from Odoo v12, v13, v14, v15, v16, v17, or v18 to Odoo 19.
+                                        Guided migration process with minimal user intervention.
+                                        End-to-end migration workflow.</b>
+                                </li>
+                                <li class="mb8 text-left mt-3" style="text-align:left;">
+                                    <b>Automatic database compatibility check.
+                                        Detection of installed modules and dependencies.
+                                        Migration readiness assessment before execution.</b>
+                                </li>
+                                <li class="mb8 text-left mt-3" style="text-align:left;">
+                                    <b>Maintains business data throughout the migration process.
+                                        Preserves master data, transactions, configurations, and attachments.
+                                        Validates data integrity after migration.</b>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="mt-3 pb-4">
+                                <li class="mb8 text-left mt-3" style="text-align:left;">
+                                    <b>Post-migration verification checks.
+                                        Module installation validation.
+                                        Database consistency checks.</b>
+                                </li>
+                                <li class="mb8 text-left mt-3" style="text-align:left;">
+                                    <b>Detailed migration summary.
+                                        Success and warning reports.
+                                        Error logs for troubleshooting and review.</b>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+
+                <div class="tab-pane fade " id="screenshots">
+                    <div class="row">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="col-12">
+                                        <h3 class="text-center alert"
+                                            style=" color:#4B5ADA; background-color:#d9ddff; border-radius:10px">
+                                            <strong> Odoo Automatic Version Upgrade / Migration</strong>
+                                        </h3>
+                                    </div>
+                                    <div class="mt-3 mb-5 text-center oe_screenshot">
+                                        <p style=" color:#4B5ADA;font-size: 2rem;">1.From your main Odoo dashboard, locate and click on the Odoo Migration app icon to open the application.
+                                        </p><img class="img-fluid w-55" src="ss/1.png">
+                                    </div>
+                                    <div class="mt-3 mb-5 text-center oe_screenshot">
+                                        <p style=" color:#4B5ADA;font-size: 2rem;">2.On the Migration Tickets page, click the Start Migration button located in the top menu bar to launch the migration wizard.
+                                        </p><img class="img-fluid w-55" src="ss/2.png">
+                                    </div>
+                                    <div class="mt-3 mb-5 text-center oe_screenshot">
+                                        <p style=" color:#4B5ADA;font-size: 2rem;">3.The wizard popup will appear. Verify your Current Odoo Version and the Target Version, then click the Next button.</p><img class="img-fluid w-55"
+                                            src="ss/3.png">
+                                    </div>
+                                    <div class="mt-3 mb-5 text-center oe_screenshot">
+                                        <p style=" color:#4B5ADA;font-size: 2rem;">4.The next screen will display your server details and a complete list of your installed Custom Modules. Review this information and click Next.</p><img class="img-fluid w-55" src="ss/4.png">
+                                    </div>
+                                    <div class="mt-3 mb-5 text-center oe_screenshot">
+                                        <p style=" color:#4B5ADA;font-size: 2rem;">5.An alert will notify you that a manual migration is required due to the custom modules. Fill out the required basic information (like your Contact Person Name) in the form below, then click Create Ticket.</p><img class="img-fluid w-55" src="ss/5.png">
+                                    </div>
+                                    <div class="mt-3 mb-5 text-center oe_screenshot">
+                                        <p style=" color:#4B5ADA;font-size: 2rem;">6.You will be redirected to the form view of your newly created Migration Ticket, which displays a comprehensive summary of all your submitted request details.</p>
+                                        <img class="img-fluid w-55" src="ss/6.png">
+                                    </div>
+                                    <div class="mt-3 mb-5 text-center oe_screenshot">
+                                        <p style=" color:#4B5ADA;font-size: 2rem;">7.You can now find and track your newly generated ticket (e.g., ticket 00049) directly from the main Migration Tickets list view.</p>
+                                        <img class="img-fluid w-55" src="ss/7.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane fade " id="faq" role="tabpanel" aria-labelledby="tab4">
+                    <div class="row">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div id="accordion">
+                                        <div class="card">
+                                            <div class="card-header"> <a class="card-link">
+                                                    <strong>Qn :</strong> What does “Odoo Automatic Version Upgrade /
+                                                    Migration” mean? ?
+                                                </a> </div>
+                                            <div id="collapseOne" class>
+                                                <div class="card-body"> <strong>Ans :</strong> It means you can migrate
+                                                    from any lower Odoo version to Odoo 19.0 supported version,
+                                                    including major upgrades. </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header"> <a class="card-link">
+                                                    <strong>Qn :</strong> Which Odoo versions are supported ? </a>
+                                            </div>
+                                            <div id="collapseTwo" class>
+                                                <div class="card-body"> <strong>Ans:</strong> The app supports migration
+                                                    between multiple major versions of Odoo &amp;
+                                                    For specific source and target version confirmation, please contact
+                                                    us before purchase with: Current version, Target version, Hosting
+                                                    type. </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-header"> <a class="card-link">
+                                                    <strong>Qn :</strong> Does this work for both Community and
+                                                    Enterprise editions? </a> </div>
+                                            <div id="collapseThree" class>
+                                                <div class="card-body"> <strong>Ans:</strong> Yes ✅ It supports:
+                                                    Community, Enterprise. </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-header"> <a class="card-link">
+                                                    <strong>Qn :</strong> Does it migrate custom modules? </a> </div>
+                                            <div id="collapseFour show" class>
+                                                <div class="card-body"> <strong>Ans:</strong> The app Scans all
+                                                    installed custom modules, Detects deprecated APIs and methods,
+                                                    Generates a compatibility report. </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-header"> <a class="card-link">
+                                                    <strong>Qn :</strong> What happens if automatic migration fails?
+                                                </a> </div>
+                                            <div id="collapseFour show" class>
+                                                <div class="card-body"> <strong>Ans:</strong> If automation does not
+                                                    complete successfully:
+                                                    <br>
+                                                    1. We create a support ticket.
+                                                    <br>
+                                                    2. Our technical team reviews your database.
+                                                    <br>
+                                                    3. We provide
+                                                    Manual migration cost
+                                                    Estimated timeline
+                                                    You can then decide whether to proceed..
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-header"> <a class="card-link">
+                                                    <strong>Qn :</strong> Is there a refund policy? </a> </div>
+                                            <div id="collapseFour show" class>
+                                                <div class="card-body"> <strong>Ans:</strong> Yes. 💯 If:
+                                                    <br>
+                                                    1. Automatic migration fails.
+                                                    <br>
+                                                    2. We provide a manual quotation.
+                                                    <br>
+                                                    3. You decide not to proceed.
+                                                    <br>
+                                                    👉 We will refund 100% of the app purchase amount.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <a class="card-link">
+                                                    <strong>Qn :</strong> Does it migrate third-party integrations?
+                                                </a>
+                                            </div>
+                                            <div id="collapseNine show" class>
+                                                <div class="card-body">
+                                                    <strong>Ans:</strong> The system checks installed modules and
+                                                    detects incompatibilities.
+                                                    <br><br>
+                                                    However:
+                                                    <br>
+                                                    • Deep third-party integrations
+                                                    <br>
+                                                    • External APIs
+                                                    <br>
+                                                    • Custom server scripts
+                                                    <br>
+                                                    may require manual adjustment.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <a class="card-link">
+                                                    <strong>Qn :</strong> Is it compatible with Odoo.sh?
+                                                </a>
+                                            </div>
+                                            <div id="collapseTen show" class>
+                                                <div class="card-body">
+                                                    <strong>Ans:</strong> Yes. ✅ It works with:
+                                                    <br>
+                                                    • Odoo.sh
+                                                    <br>
+                                                    • On-Premise servers
+                                                    <br>
+                                                    • Cloud VPS
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <a class="card-link">
+                                                    <strong>Qn :</strong> How long does migration take?
+                                                </a>
+                                            </div>
+                                            <div id="collapseEleven show" class>
+                                                <div class="card-body">
+                                                    <strong>Ans:</strong> It depends on:
+                                                    <br>
+                                                    • Database size
+                                                    <br>
+                                                    • Number of modules
+                                                    <br>
+                                                    • Customizations
+                                                    <br>
+                                                    • Server performance
+                                                    <br><br>
+                                                    Small databases may complete quickly, while large enterprise systems
+                                                    may take longer.
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <a class="card-link">
+                                                    <strong>Qn :</strong> Does it migrate data as well?
+                                                </a>
+                                            </div>
+                                            <div id="collapseTwelve show" class>
+                                                <div class="card-body">
+                                                    <strong>Ans:</strong> Yes. ✔️ The module handles:
+                                                    <br>
+                                                    • Database structure updates
+                                                    <br>
+                                                    • Model/field mapping
+                                                    <br>
+                                                    • Record validation
+                                                    <br>
+                                                    • Data integrity checks
+                                                    <br><br>
+                                                    A post-migration validation report is generated.
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <a class="card-link">
+                                                    <strong>Qn :</strong> Should I contact you before purchasing?
+                                                </a>
+                                            </div>
+                                            <div id="collapseThirteen show" class>
+                                                <div class="card-body">
+                                                    <strong>Ans:</strong> For highly customized or enterprise systems —
+                                                    Yes, strongly recommended.
+                                                    <br><br>
+                                                    Please email:
+                                                    <strong>📧: odoo@prefortune.com</strong>
+                                                    <br>
+                                                    Include:
+                                                    Current version,
+                                                    Target version,
+                                                    Installed modules list,
+                                                    Hosting type,
+                                                    We will evaluate and guide you before purchase.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <a class="card-link">
+                                                    <strong>Qn :</strong> Does this replace official Odoo upgrade
+                                                    services?
+                                                </a>
+                                            </div>
+                                            <div id="collapseFourteen show" class>
+                                                <div class="card-body">
+                                                    <strong>Ans:</strong> No.
+                                                    <br>
+                                                    This is an automation tool designed for structured migrations.
+                                                    <br><br>
+                                                    For extremely complex systems, manual technical intervention may
+                                                    still be required.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <a class="card-link">
+                                                    <strong>Qn :</strong> Is technical support included?
+                                                </a>
+                                            </div>
+                                            <div id="collapseFifteen show" class>
+                                                <div class="card-body">
+                                                    <strong>Ans:</strong> Yes. ✅ Support includes:
+                                                    <br>
+                                                    • Installation guidance
+                                                    <br>
+                                                    • Migration assistance
+                                                    <br>
+                                                    • Automation troubleshooting
+                                                    <br>
+                                                    • Investigation in case of failure
+                                                    <br><br>
+                                                    Manual migration work is quoted separately if required.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade " id="support" role="tabpanel" aria-labelledby="tab4">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="container p-2">
+                                <div class="row mt-3 p-3">
+
+                                    <div class="col-md-12"
+                                        style="display:table-cell; border-radius: 30px; background-color:#FFFFFF; padding:20px; border-radius: 10px;">
+
+                                        <h3 style="text-align:center; color: #000000;"><b>Our
+                                                solutions focus on your problems</b></h3>
+                                        <div class="dropdown-divider mt-3 mb-3" style="border-color:  #000000"></div>
+                                        <div class="col-12">
+                                            <div class="row position-relative"
+                                                style="color:#333333; font-weight:500; font-size:16px">
+                                                <div class="col-sm-6 col-lg-6 col-xl-6 mb-3 pr-lg-0 pr-sm-1">
+                                                    <div class="d-flex align-items-top h-100 px-3 py-3"
+                                                        style="border:1px solid #000000; border-radius:15px">
+                                                        <div class="w-100 ">
+                                                            <ul>
+                                                                <li class="text-left" style="color: #000000;">Odoo
+                                                                    Implementation</li>
+                                                                <li class="text-left" style="color: #000000;">Odoo
+                                                                    Customization</li>
+                                                                <li class="text-left" style="color: #000000;">ERP
+                                                                    Development and
+                                                                    Implementation</li>
+                                                                <li class="text-left" style="color: #000000;">Odoo Ipass
+                                                                    Cloud</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 col-lg-6 col-xl-6 mb-3 pr-lg-0 pr-sm-1">
+                                                    <div class="d-flex align-items-top h-100 px-3 py-3"
+                                                        style="border:1px solid #4B5ADA; border-radius:15px">
+                                                        <div class="w-100 ">
+                                                            <ul>
+                                                                <li class="text-left" style="color: #000000;">AI for
+                                                                    Odoo</li>
+                                                                <li class="text-left" style="color: #000000;">Odoo Apps
+                                                                </li>
+                                                                <li class="text-left" style="color: #000000;">Aws
+                                                                    Marketplace
+                                                                    Products</li>
+                                                                <li class="text-left" style="color: #000000;">Business
+                                                                    Engines</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <p class="pt-4" style="font-size: 25px; color: #000000;">Our Pricing
+                                            includes User Manual, 90 Days Support <b>(Monday-Friday
+                                                10am to 7pm IST)</b> and One time Setup</p>
+
+                                        <div class="container pt-3 pb-3"
+                                            style="text-align: Left; margin-top:20px; list-style: none!important; line-height: 37px; padleft: 14px; font-weight: 600; font-size:14px; ">
+
+                                            <p class="text-center" style="color: #000000;">• Works &
+                                                tested on standard installations of Odoo with no third
+                                                party apps, <br>• Free support only for odoo
+                                                installations with no third party apps, <br>• Paid
+                                                support availaible for Odoo installations with third
+                                                party apps.
+                                            </p>
+
+                                        </div>
+                                        <p><a class="btn m-2" href="mailto:odoosupport@prefortune.com"
+                                                style="background-color:#1c243c; padding:9px; color:#FFF; font-size:20px"><i
+                                                    class="fa fa-envelope"
+                                                    style="padding-right:9px"></i>odoosupport@prefortune.com</a>
+                                            <a class="btn m-2" href="skype:prefortune?call"
+                                                style="background-color:#1c243c; padding:9px; color:#FFF; font-size:20px"><i
+                                                    class="fa fa-skype" style="padding-right:9px"></i>Prefortune
+                                                Technologies LLP</a>
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-12 text-center">
+                                <div class="text-center"> <img class="img-fluid w-10" src="img/prefortune_logo.png"
+                                        style="height:200px"> </div>
+                                <h2 class="p-2" style="color: #4B5ADA;"><strong>Prefortune
+                                        Technologies LLP.</strong></h2>
+                                <p class="text-justify" style="font-size:16px;"><b>Prefortune</b> is a Odoo Official
+                                    Partner,
+                                    Odoo Development company. Our philosophy is to use Open
+                                    Source
+                                    tools and technologies to provide cost effective and green
+                                    solutions for our customers.</p>
+                                <p class="text-justify" style="font-size:16px;">Prefortune
+                                    Technologies LLP is Working on web development, Mobile
+                                    development, and Odoo ERP. It is the top outsourcing
+                                    software company based on the creation of e-Commerce
+                                    applications and Odoo.</p>
+                                <p class="oe_mt32 text-justify" style="font-size:16px">If you
+                                    need any help or want more additional features, you may
+                                    contact us through:</p>
+                                <p><a class="btn m-2" href="mailto:odoosupport@prefortune.com"
+                                        style="background-color:#EC450E; padding:9px; color:#fff; font-size:20px"><i
+                                            class="fa fa-envelope"
+                                            style="padding-right:9px"></i>odoosupport@prefortune.com</a>
+                                    <a class="btn m-2" href="skype:prefortune?call"
+                                        style="background-color:#00AAE9; padding:9px; color:#fff; font-size:20px"><i
+                                            class="fa fa-skype" style="padding-right:9px"></i>Prefortune Technologies
+                                        LLP</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
