@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+pf_auto_version_migration.access_pf_migration_wizard,access_pf_migration_wizard,pf_auto_version_migration.model_pf_migration_wizard,base.group_user,1,1,1,1
+pf_auto_version_migration.access_pf_migration_ticket,access_pf_migration_ticket,pf_auto_version_migration.model_pf_migration_ticket,base.group_user,1,1,1,1

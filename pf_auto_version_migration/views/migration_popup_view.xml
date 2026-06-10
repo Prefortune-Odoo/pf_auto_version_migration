@@ -1,0 +1,250 @@
+<odoo>
+  <data>
+
+    <!-- Form view for migration wizard -->
+    <record model="ir.ui.view" id="pf_migration_wizard_form_view">
+      <field name="name">pf.migration.wizard.form</field>
+      <field name="model">pf.migration.wizard</field>
+      <field name="arch" type="xml">
+
+        <form string="Odoo Migration"
+              create="false"
+              delete="false"
+              js_class="pf_migration_wizard_form_view_js">
+
+          <sheet>
+
+            <!-- ================= FIRST / SECOND STEP ================= -->
+            <group>
+              <field name="active_state" invisible="1"/>
+
+              <!-- FIRST STEP -->
+              <field name="current_version"
+                     readonly="1"
+                     attrs="{'invisible': [('active_state','!=','first')]}"/>
+
+              <!-- <field name="destination_version"
+                     attrs="{'invisible': [('active_state','!=','first')]}" /> -->
+              <field name="destination_version" widget="badge" readonly="1" decoration-info="1"/>
+
+              <!-- SECOND STEP -->
+              <field name="server_ip_address"
+                     readonly="1"
+                     attrs="{'invisible': [('active_state','!=','second')]}"/>
+
+              <field name="server_url"
+                     readonly="1"
+                     attrs="{'invisible': [('active_state','!=','second')]}"/>
+
+              <field name="server_os_name"
+                     readonly="1"
+                     attrs="{'invisible': [('active_state','!=','second')]}"/>
+
+              <field name="total_list_of_custom_modules"
+                     readonly="1"
+                     attrs="{'invisible': [('active_state','!=','second')]}"/>
+
+              <field name="list_of_custom_modules"
+                     readonly="1"
+                     attrs="{'invisible': [('active_state','!=','second')]}"/>
+            </group>
+
+
+            <!-- ================= FINISH LOADING BLOCK ================= -->
+            <div class="o_form_sheet"
+                 attrs="{'invisible': [('active_state','!=','finish')]}">
+
+              <div id="migration-loading"
+                   class="alert alert-info text-center"
+                   style="padding:2rem; margin:1rem 0; display:none;">
+
+                <div style="margin-bottom:1.5rem;">
+                  <i class="fa fa-spinner fa-spin fa-3x"
+                     style="color:#17a2b8; margin-bottom:1rem;"></i>
+                </div>
+
+                <h3 style="margin-bottom:1rem; font-weight:600;">
+                  <i class="fa fa-info-circle"></i>
+                  Migration Process Please Wait
+                </h3>
+
+              </div>
+
+              <div id="migration-status-message" ></div>
+
+            </div>
+
+
+            <!-- ================= FINISH FORM FIELDS ================= -->
+            <div class="migration-fields"
+                 style="margin-top:2rem; padding-top:2rem; border-top:2px solid #d1ecf1;"
+                 attrs="{'invisible': [('active_state','!=','finish')]}">
+
+              <!-- Basic Information -->
+              <h2 style="color:#17a2b8; margin-bottom:1rem; font-size:1.2rem; font-weight:600;">
+                <i class="fa fa-user"></i> Basic Information
+              </h2>
+
+              <group>
+                <group>
+                  <field name="company_name" readonly="1"/>
+                  <field name="name"/>
+                  <field name="email" widget="email"/>
+                </group>
+                <group>
+                  <field name="phone_number"/>
+                  <field name="whatsapp_number"/>
+                  <field name="po_number"/>
+                </group>
+              </group>
+
+
+              <!-- Current Odoo Setup -->
+              <h2 style="color:#17a2b8; margin-top:2rem; margin-bottom:1rem; font-size:1.2rem; font-weight:600;">
+                <i class="fa fa-server"></i> Current Odoo Setup
+              </h2>
+
+              <group>
+                <group>
+                  <field name="current_version" readonly="1" />
+                  <field name="edition_type" readonly="1"/>
+                  <field name="hosting_type"/>
+                </group>
+                <group>
+                  <field name="vps_provider"
+                         attrs="{'invisible': [('hosting_type','!=','third_party_vps')]}"/>
+                  <field name="server_os_name" readonly="1" />
+                  <field name="destination_version" readonly="1"/>
+                </group>
+              </group>
+
+              <group>
+                <field name="migration_timeline"
+                       placeholder="Please specify your timeline or urgency..."/>
+              </group>
+
+
+              <!-- Database Details -->
+              <h2 style="color:#17a2b8; margin-top:2rem; margin-bottom:1rem; font-size:1.2rem; font-weight:600;">
+                <i class="fa fa-database"></i> Database Details
+              </h2>
+
+              <group>
+                <group>
+                  <field name="database_name" readonly="1"/>
+                  <field name="database_size" readonly="1" />
+                </group>
+                <group>
+                  <field name="number_of_users" readonly="1"/>
+                  <field name="is_multi_company" readonly="1"/>
+                </group>
+              </group>
+
+
+              <!-- Customization Information -->
+              <h2 style="color:#17a2b8; margin-top:2rem; margin-bottom:1rem; font-size:1.2rem; font-weight:600;">
+                <i class="fa fa-puzzle-piece"></i> Customization Information
+              </h2>
+
+              <group>
+                <group>
+                  <field name="total_list_of_custom_modules" readonly="1" />
+                  <field name="list_of_custom_modules" widget="many2many_tags" readonly="1"/>
+                </group>
+              </group>
+
+              <group>
+                <field name="third_party_apps"
+                       placeholder="List any third-party apps installed..."/>
+                <field name="core_code_modifications"
+                       placeholder="Describe any core code modifications..."/>
+              </group>
+
+
+              <!-- Integrations -->
+              <h2 style="color:#17a2b8; margin-top:2rem; margin-bottom:1rem; font-size:1.2rem; font-weight:600;">
+                <i class="fa fa-plug"></i> Integrations
+              </h2>
+
+              <group>
+                <field name="payment_gateways"
+                       placeholder="List payment gateways integrated..."/>
+                <field name="ecommerce_platforms"
+                       placeholder="List e-commerce platforms..."/>
+                <field name="shipping_apis"
+                       placeholder="List shipping APIs..."/>
+                <field name="accounting_integrations"
+                       placeholder="List accounting integrations..."/>
+                <field name="external_system_apis"
+                       placeholder="List external system APIs..."/>
+              </group>
+
+
+              <!-- Access Information -->
+              <h2 style="color:#17a2b8; margin-top:2rem; margin-bottom:1rem; font-size:1.2rem; font-weight:600;">
+                <i class="fa fa-key"></i> Access Information (Shared Securely After Ticket Creation)
+              </h2>
+
+              <group>
+                <field name="server_ssh_rdp_access"
+                       placeholder="Server SSH / RDP access details..."/>
+                <field name="odoo_admin_access"
+                       placeholder="Odoo admin access details..."/>
+                <field name="repository_access"
+                       placeholder="Repository access details (if Odoo.sh or Git-based)..."/>
+              </group>
+
+
+              <!-- Optional -->
+              <h2 style="color:#17a2b8; margin-top:2rem; margin-bottom:1rem; font-size:1.2rem; font-weight:600;">
+                <i class="fa fa-info-circle"></i> Optional but Helpful
+              </h2>
+
+              <group>
+                <group>
+                  <field name="latest_backup_available"/>
+                </group>
+                <group>
+                  <field name="preferred_downtime_window"
+                         placeholder="Preferred downtime window..."/>
+                </group>
+              </group>
+
+              <group>
+                <field name="current_known_issues"
+                       placeholder="Any current known issues..."/>
+              </group>
+
+            </div>
+
+
+            <!-- ================= FOOTER ================= -->
+            <footer>
+
+              <button string="Cancel"
+                      class="btn-secondary"
+                      special="cancel"/>
+
+              <button string="Next"
+                      name="action_next_step"
+                      type="object"
+                      class="btn-primary"
+                      attrs="{'invisible': [('active_state','=','finish')]}"/>
+
+              <button string="Create Ticket"
+                      id="create_ticket_button"
+                      name="action_create_ticket"
+                      type="object"
+                      class="btn-primary"
+                      attrs="{'invisible': [('active_state','!=','finish')]}"/>
+
+            </footer>
+
+          </sheet>
+        </form>
+
+      </field>
+    </record>
+
+  </data>
+</odoo>

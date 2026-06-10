@@ -1,0 +1,39 @@
+<odoo>
+  <data>
+    <!-- List view for Migration Ticket -->
+    <record model="ir.ui.view" id="pf_migration_ticket_list_view">
+      <field name="name">pf.migration.ticket.tree</field>
+      <field name="model">pf.migration.ticket</field>
+      <field name="arch" type="xml">
+        <tree string="Migration Tickets">
+          <field name="ticket_number"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Form view for Migration Ticket -->
+    <record model="ir.ui.view" id="pf_migration_ticket_form_view">
+      <field name="name">pf.migration.ticket.form</field>
+      <field name="model">pf.migration.ticket</field>
+      <field name="arch" type="xml">
+        <form string="Migration Ticket">
+          <div class="alert alert-warning p-3 text-center" role="alert" invisible="not context.get('send_notification')">
+                <span>Migration ticket created successfully, Please Check Your Mail. </span>
+          </div>
+          <sheet>
+            <group>
+              <field name="ticket_number" readonly="1" />
+            </group>
+            <notebook>
+              <page string="Description" name="description">
+                <field name="description" options="{'collaborative': true}" readonly="1"/>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+  </data>
+</odoo>
+
