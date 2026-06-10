@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <template id="assets_frontend_version_migration" inherit_id="web.assets_backend" name="Odoo Version Migration">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/pf_auto_version_migration/static/src/js/migration_form_controller.js" />
+        </xpath>
+    </template>
+</odoo>
