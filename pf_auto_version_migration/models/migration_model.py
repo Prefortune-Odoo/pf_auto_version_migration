@@ -328,7 +328,7 @@ class MigrationWizard(models.TransientModel):
             }
             
             headers = {'Content-Type': 'application/json'}
-            response = requests.post(url, json=jsonrpc_payload, headers=headers, timeout=30)
+            response = requests.post(url, json=jsonrpc_payload, headers=headers, timeout=120)
             _logger.info("Response status: %s", response.status_code)
             _logger.info("Response content: %s", response.text)
             
