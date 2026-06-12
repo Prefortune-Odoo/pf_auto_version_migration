@@ -45,7 +45,7 @@ def send_install_webhook(env, module_name, app_name, module_version):
                     'Content-Type': 'application/json',
                     # 'ngrok-skip-browser-warning': 'true',
                 },
-                timeout=10
+                timeout=30
             )
         except Exception:
             return
