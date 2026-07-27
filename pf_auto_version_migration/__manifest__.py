@@ -24,7 +24,6 @@
         'views/migration_ticket_views.xml',
     ],
     "images": ["static/description/banner.gif"],
-    'post_init_hook': 'post_init_hook',
     'installable' : True,
     'application': True,
     'auto_install' : False,
